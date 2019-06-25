@@ -1,0 +1,22 @@
+server:
+  port: 7900
+spring:
+  application:
+    name: provider-user
+
+
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://user:123@localhost:10000/eureka
+#
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10000/eureka/
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
+
+#    register-with-eureka: true
+#    fetch-registry: true
+

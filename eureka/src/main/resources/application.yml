@@ -1,0 +1,22 @@
+server:
+  port: 10000
+
+#业务当前的eureka是单机的, 所以需要做一些配置
+#eureka:
+#  client:
+#    fetch-registry: false
+#    register-with-eureka: false
+#    serviceUrl:
+#      defaultZone: http://user:123@localhost:10000/eureka
+
+#spring:
+#  security:
+#    user:
+#      name: user
+#      password: 123
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://localhost:10000/eureka

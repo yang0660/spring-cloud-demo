@@ -1,0 +1,18 @@
+server:
+  port: 8900
+
+spring:
+  application:
+    name: consumer-order-feign-custom
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10000/eureka/
+  instance:
+    instance-id: consumer-order-feign-custom:8900
+
+logging:
+  level:
+    com.qianfeng.springcloud.feign.FeignClient01: debug

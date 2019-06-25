@@ -1,0 +1,21 @@
+server:
+  port: 9900
+
+spring:
+  application:
+    name: consumer-hystrix-turbine
+
+user:
+  url: http://localhost:7900/user/
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10000/eureka/
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
+
+turbine:
+  aggregator:
+    cluster-config: consumer-order-hystrix
+  app-config: consumer-order-hystrix
